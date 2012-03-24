@@ -1,0 +1,6 @@
+--exclude=.svn
+--regex-PHP=/^[ \t]*((abstract|final)[ \t]+)?class[ \t]+([a-zA-Z_][a-zA-Z0-9_]*)/\3/C,class/
+--regex-PHP=/^[ \t]*interface[ \t]+([a-zA-Z_][a-zA-Z0-9_]*)/\1/i,interface/
+--regex-PHP=/^[ \t]*((final|public|protected|private|static|abstract)[ \t])+function[ \t]+&?([a-zA-Z_][a-zA-Z0-9_]*)[ \t]*\([^)]*\)/\3/m,method/
+--regex-PHP=/^[ \t]*((public|protected|private|static)[ \t])+\$([a-zA-Z_][a-zA-Z0-9_]*)/\3/p,property/
+--regex-PHP=/^[ \t]*const[ \t]+([a-zA-Z_][a-zA-Z0-9_]*)/\1/D,classConst/
