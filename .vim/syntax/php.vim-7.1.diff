@@ -1,0 +1,181 @@
+--- php.vim-7.1.orig	2007-05-12 08:10:12.000000000 -0400
++++ php.vim	2008-04-25 15:42:15.000000000 -0400
+@@ -137,7 +137,7 @@
+ 
+ " Function and Methods ripped from php_manual_de.tar.gz Jan 2003
+ syn keyword phpFunctions  apache_child_terminate apache_get_modules apache_get_version apache_getenv apache_lookup_uri apache_note apache_request_headers apache_response_headers apache_setenv ascii2ebcdic ebcdic2ascii getallheaders virtual contained
+-syn keyword phpFunctions  array_change_key_case array_chunk array_combine array_count_values array_diff_assoc array_diff_uassoc array_diff array_fill array_filter array_flip array_intersect_assoc array_intersect array_key_exists array_keys array_map array_merge_recursive array_merge array_multisort array_pad array_pop array_push array_rand array_reduce array_reverse array_search array_shift array_slice array_splice array_sum array_udiff_assoc array_udiff_uassoc array_udiff array_unique array_unshift array_values array_walk array arsort asort compact count current each end extract in_array key krsort ksort list natcasesort natsort next pos prev range reset rsort shuffle sizeof sort uasort uksort usort contained
++syn keyword phpFunctions  array_change_key_case array_chunk array_combine array_count_values array_diff_assoc array_diff_uassoc array_diff array_fill array_filter array_flip array_intersect_assoc array_intersect array_key_exists array_keys array_map array_merge_recursive array_merge array_multisort array_pad array_pop array_push array_rand array_reduce array_reverse array_search array_shift array_slice array_splice array_sum array_udiff_assoc array_udiff_uassoc array_udiff array_unique array_unshift array_values array_walk array arsort asort compact count current each end extract in_array key krsort ksort natcasesort natsort next pos prev range reset rsort shuffle sizeof sort uasort uksort usort contained
+ syn keyword phpFunctions  aspell_check aspell_new aspell_suggest  contained
+ syn keyword phpFunctions  bcadd bccomp bcdiv bcmod bcmul bcpow bcpowmod bcscale bcsqrt bcsub  contained
+ syn keyword phpFunctions  bzclose bzcompress bzdecompress bzerrno bzerror bzerrstr bzflush bzopen bzread bzwrite  contained
+@@ -200,7 +200,7 @@
+ syn keyword phpFunctions  mime_content_type contained
+ syn keyword phpFunctions  ming_setcubicthreshold ming_setscale ming_useswfversion SWFAction SWFBitmap swfbutton_keypress SWFbutton SWFDisplayItem SWFFill SWFFont SWFGradient SWFMorph SWFMovie SWFShape SWFSprite SWFText SWFTextField contained
+ syn keyword phpMethods  getHeight getWidth addAction addShape setAction setdown setHit setOver setUp addColor move moveTo multColor remove Rotate rotateTo scale scaleTo setDepth setName setRatio skewX skewXTo skewY skewYTo moveTo rotateTo scaleTo skewXTo skewYTo getwidth addEntry getshape1 getshape2 add nextframe output remove save setbackground setdimension setframes setrate streammp3 addFill drawCurve drawCurveTo drawLine drawLineTo movePen movePenTo setLeftFill setLine setRightFill add nextframe remove setframes addString getWidth moveTo setColor setFont setHeight setSpacing addstring align setbounds setcolor setFont setHeight setindentation setLeftMargin setLineSpacing setMargins setname setrightMargin contained
+-syn keyword phpFunctions  connection_aborted connection_status connection_timeout constant define defined die eval exit get_browser highlight_file highlight_string ignore_user_abort pack show_source sleep uniqid unpack usleep contained
++syn keyword phpFunctions  connection_aborted connection_status connection_timeout constant define defined eval get_browser highlight_file highlight_string ignore_user_abort pack show_source sleep uniqid unpack usleep contained
+ syn keyword phpFunctions  udm_add_search_limit udm_alloc_agent udm_api_version udm_cat_list udm_cat_path udm_check_charset udm_check_stored udm_clear_search_limits udm_close_stored udm_crc32 udm_errno udm_error udm_find udm_free_agent udm_free_ispell_data udm_free_res udm_get_doc_count udm_get_res_field udm_get_res_param udm_load_ispell_data udm_open_stored udm_set_agent_param contained
+ syn keyword phpFunctions  msession_connect msession_count msession_create msession_destroy msession_disconnect msession_find msession_get_array msession_get msession_getdata msession_inc msession_list msession_listvar msession_lock msession_plugin msession_randstr msession_set_array msession_set msession_setdata msession_timeout msession_uniq msession_unlock  contained
+ syn keyword phpFunctions  msql_affected_rows msql_close msql_connect msql_create_db msql_createdb msql_data_seek msql_dbname msql_drop_db msql_dropdb msql_error msql_fetch_array msql_fetch_field msql_fetch_object msql_fetch_row msql_field_seek msql_fieldflags msql_fieldlen msql_fieldname msql_fieldtable msql_fieldtype msql_free_result msql_freeresult msql_list_dbs msql_list_fields msql_list_tables msql_listdbs msql_listfields msql_listtables msql_num_fields msql_num_rows msql_numfields msql_numrows msql_pconnect msql_query msql_regcase msql_result msql_select_db msql_selectdb msql_tablename msql  contained
+@@ -248,7 +248,7 @@
+ syn keyword phpMethods  attributes children get_attr get_nodes has_children has_siblings is_asp is_comment is_html is_jsp is_jste is_text is_xhtml is_xml next prev tidy_node contained
+ syn keyword phpFunctions  token_get_all token_name  contained
+ syn keyword phpFunctions  base64_decode base64_encode get_meta_tags http_build_query parse_url rawurldecode rawurlencode urldecode urlencode  contained
+-syn keyword phpFunctions  doubleval empty floatval get_defined_vars get_resource_type gettype import_request_variables intval is_array is_bool is_callable is_double is_float is_int is_integer is_long is_null is_numeric is_object is_real is_resource is_scalar is_string isset print_r serialize settype strval unserialize unset var_dump var_export contained
++syn keyword phpFunctions  doubleval floatval get_defined_vars get_resource_type gettype import_request_variables intval is_array is_bool is_callable is_double is_float is_int is_integer is_long is_null is_numeric is_object is_real is_resource is_scalar is_string print_r serialize settype strval unserialize var_dump var_export contained
+ syn keyword phpFunctions  vpopmail_add_alias_domain_ex vpopmail_add_alias_domain vpopmail_add_domain_ex vpopmail_add_domain vpopmail_add_user vpopmail_alias_add vpopmail_alias_del_domain vpopmail_alias_del vpopmail_alias_get_all vpopmail_alias_get vpopmail_auth_user vpopmail_del_domain_ex vpopmail_del_domain vpopmail_del_user vpopmail_error vpopmail_passwd vpopmail_set_user_quota  contained
+ syn keyword phpFunctions  w32api_deftype w32api_init_dtype w32api_invoke_function w32api_register_function w32api_set_call_method contained
+ syn keyword phpFunctions  wddx_add_vars wddx_deserialize wddx_packet_end wddx_packet_start wddx_serialize_value wddx_serialize_vars contained
+@@ -274,7 +274,7 @@
+ syn keyword phpLabel  case default switch contained
+ 
+ " Statement
+-syn keyword phpStatement  return break continue exit  contained
++syn keyword phpStatement  return break continue exit die isset unset empty echo  contained
+ 
+ " Keyword
+ syn keyword phpKeyword  var const contained
+@@ -283,18 +283,18 @@
+ syn keyword phpType bool[ean] int[eger] real double float string array object NULL  contained
+ 
+ " Structure
+-syn keyword phpStructure  extends implements instanceof parent self contained
++syn keyword phpStructure  extends implements instanceof parent self list contained
+ 
+ " Operator
+-syn match phpOperator "[-=+%^&|*!.~?:]" contained display
++syn match phpOperator "[-=+@%^&|*!.~?:,]" contained display
+ syn match phpOperator "[-+*/%^&|.]="  contained display
+ syn match phpOperator "/[^*/]"me=e-1  contained display
+-syn match phpOperator "\$"  contained display
+ syn match phpOperator "&&\|\<and\>" contained display
+ syn match phpOperator "||\|\<x\=or\>" contained display
+ syn match phpRelation "[!=<>]=" contained display
+ syn match phpRelation "[<>]"  contained display
+ syn match phpMemberSelector "->"  contained display
++syn match phpMemberSelector "::"  contained display
+ syn match phpVarSelector  "\$"  contained display
+ 
+ " Identifier
+@@ -305,6 +305,7 @@
+ 
+ " Methoden
+ syn match phpMethodsVar "->\h\w*" contained contains=phpMethods,phpMemberSelector display
++syn match phpMethodsVar "::\h\w*" contained contains=phpMethods,phpMemberSelector display
+ 
+ " Include
+ syn keyword phpInclude  include require include_once require_once contained
+@@ -335,7 +336,7 @@
+ endif
+ 
+ " Todo
+-syn keyword phpTodo todo fixme xxx  contained
++syn keyword phpTodo todo fixme note  contained
+ 
+ " Comment
+ if exists("php_parent_error_open")
+@@ -355,13 +356,13 @@
+ 
+ " String
+ if exists("php_parent_error_open")
+-  syn region  phpStringDouble matchgroup=None start=+"+ skip=+\\\\\|\\"+ end=+"+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained keepend
+-  syn region  phpBacktick matchgroup=None start=+`+ skip=+\\\\\|\\"+ end=+`+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained keepend
+-  syn region  phpStringSingle matchgroup=None start=+'+ skip=+\\\\\|\\'+ end=+'+  contains=@phpAddStrings contained keepend
++  syn region  phpStringDouble start=+"+ skip=+\\\\\|\\"+ end=+"+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained keepend
++  syn region  phpBacktick start=+`+ skip=+\\\\\|\\"+ end=+`+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained keepend
++  syn region  phpStringSingle start=+'+ skip=+\\\\\|\\'+ end=+'+  contains=@phpAddStrings contained keepend
+ else
+-  syn region  phpStringDouble matchgroup=None start=+"+ skip=+\\\\\|\\"+ end=+"+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained extend keepend
+-  syn region  phpBacktick matchgroup=None start=+`+ skip=+\\\\\|\\"+ end=+`+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained extend keepend
+-  syn region  phpStringSingle matchgroup=None start=+'+ skip=+\\\\\|\\'+ end=+'+  contains=@phpAddStrings contained keepend extend
++  syn region  phpStringDouble start=+"+ skip=+\\\\\|\\"+ end=+"+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained extend keepend
++  syn region  phpBacktick start=+`+ skip=+\\\\\|\\"+ end=+`+  contains=@phpAddStrings,phpIdentifier,phpSpecialChar,phpIdentifierSimply,phpIdentifierComplex contained extend keepend
++  syn region  phpStringSingle start=+'+ skip=+\\\\\|\\'+ end=+'+  contains=@phpAddStrings contained keepend extend
+ endif
+ 
+ " HereDoc
+@@ -395,23 +396,23 @@
+ " Php Region
+ if exists("php_parent_error_open")
+   if exists("php_noShortTags")
+-    syn region   phpRegion  matchgroup=Delimiter start="<?php" end="?>" contains=@phpClTop
++    syn region   phpRegion  matchgroup=PreProc start="<?php" end="?>" contains=@phpClTop
+   else
+-    syn region   phpRegion  matchgroup=Delimiter start="<?\(php\)\=" end="?>" contains=@phpClTop
++    syn region   phpRegion  matchgroup=PreProc start="<?\(php\|=\)\=" end="?>" contains=@phpClTop
+   endif
+-  syn region   phpRegionSc  matchgroup=Delimiter start=+<script language="php">+ end=+</script>+  contains=@phpClTop
++  syn region   phpRegionSc  matchgroup=PreProc start=+<script language="php">+ end=+</script>+  contains=@phpClTop
+   if exists("php_asp_tags")
+-    syn region   phpRegionAsp matchgroup=Delimiter start="<%\(=\)\=" end="%>" contains=@phpClTop
++    syn region   phpRegionAsp matchgroup=PreProc start="<%\(=\)\=" end="%>" contains=@phpClTop
+   endif
+ else
+   if exists("php_noShortTags")
+-    syn region   phpRegion  matchgroup=Delimiter start="<?php" end="?>" contains=@phpClTop keepend
++    syn region   phpRegion  matchgroup=PreProc start="<?php" end="?>" contains=@phpClTop keepend
+   else
+-    syn region   phpRegion  matchgroup=Delimiter start="<?\(php\)\=" end="?>" contains=@phpClTop keepend
++    syn region   phpRegion  matchgroup=PreProc start="<?\(php\|=\)\=" end="?>" contains=@phpClTop keepend
+   endif
+-  syn region   phpRegionSc  matchgroup=Delimiter start=+<script language="php">+ end=+</script>+  contains=@phpClTop keepend
++  syn region   phpRegionSc  matchgroup=PreProc start=+<script language="php">+ end=+</script>+  contains=@phpClTop keepend
+   if exists("php_asp_tags")
+-    syn region   phpRegionAsp matchgroup=Delimiter start="<%\(=\)\=" end="%>" contains=@phpClTop keepend
++    syn region   phpRegionAsp matchgroup=PreProc start="<%\(=\)\=" end="%>" contains=@phpClTop keepend
+   endif
+ endif
+ 
+@@ -428,7 +429,7 @@
+   syn match phpException  "\(\s\|^\)catch\(\s\+.*}\)\@="  contained
+ 
+   set foldmethod=syntax
+-  syn region  phpFoldHtmlInside matchgroup=Delimiter start="?>" end="<?\(php\)\=" contained transparent contains=@htmlTop
++  syn region  phpFoldHtmlInside matchgroup=PreProc start="?>" end="<?\(php\)\=" contained transparent contains=@htmlTop
+   syn region  phpFoldFunction matchgroup=Storageclass start="^\z(\s*\)\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\s\([^};]*$\)\@="rs=e-9 matchgroup=Delimiter end="^\z1}" contains=@phpClFunction,phpFoldHtmlInside,phpFCKeyword contained transparent fold extend
+   syn region  phpFoldFunction matchgroup=Define start="^function\s\([^};]*$\)\@=" matchgroup=Delimiter end="^}" contains=@phpClFunction,phpFoldHtmlInside contained transparent fold extend
+   syn region  phpFoldClass  matchgroup=Structure start="^\z(\s*\)\(abstract\s\+\|final\s\+\)*class\s\+\([^}]*$\)\@=" matchgroup=Delimiter end="^\z1}" contains=@phpClFunction,phpFoldFunction,phpSCKeyword contained transparent fold extend
+@@ -442,7 +443,7 @@
+   syn keyword phpStorageClass final global private protected public static  contained
+ 
+   set foldmethod=syntax
+-  syn region  phpFoldHtmlInside matchgroup=Delimiter start="?>" end="<?\(php\)\=" contained transparent contains=@htmlTop
++  syn region  phpFoldHtmlInside matchgroup=PreProc start="?>" end="<?\(php\)\=" contained transparent contains=@htmlTop
+   syn region  phpParent matchgroup=Delimiter start="{" end="}"  contained contains=@phpClFunction,phpFoldHtmlInside transparent fold
+ else
+   syn keyword phpDefine function  contained
+@@ -469,10 +470,11 @@
+ 
+ " different syntax highlighting for 'echo', 'print', 'switch', 'die' and 'list' keywords
+ " to better indicate what they are.
+-syntax keyword phpDefine echo print contained
+-syntax keyword phpStructure list contained
+-syntax keyword phpConditional switch contained
+-syntax keyword phpStatement die contained
++" BAL - these are basically duplicated from above
++"syntax keyword phpDefine echo print contained
++"syntax keyword phpStructure list contained
++"syntax keyword phpConditional switch contained
++"syntax keyword phpStatement die contained
+ 
+ " Highlighting for PHP5's user-definable magic class methods
+ syntax keyword phpSpecialFunction containedin=ALLBUT,phpComment,phpStringDouble,phpStringSingle,phpIdentifier
+@@ -611,7 +613,7 @@
+   HiLink   phpKeyword Statement
+   HiLink   phpType  Type
+   HiLink   phpInclude Include
+-  HiLink   phpDefine  Define
++  HiLink   phpDefine  Statement
+   HiLink   phpSpecialChar SpecialChar
+   HiLink   phpParent  Delimiter
+   HiLink   phpIdentifierConst Delimiter
+@@ -631,7 +633,7 @@
+   HiLink  phpIntVar Identifier
+   HiLink  phpEnvVar Identifier
+   HiLink  phpOperator Operator
+-  HiLink  phpVarSelector  Operator
++  HiLink  phpVarSelector  Identifier
+   HiLink  phpRelation Operator
+   HiLink  phpIdentifier Identifier
+   HiLink  phpIdentifierSimply Identifier

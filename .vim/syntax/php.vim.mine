@@ -1,0 +1,22 @@
+" Vim syntax file
+" Language:     PHP 5
+" Maintainer:   Bryce Lohr
+" Last Change:  Jan 31, 2010
+"
+" Version:  0.1.0
+" Only Vim >= 7
+
+" Comments
+syn region phpComment start="/\*" end="\*/" contained extend contains=@Spell
+syn match phpComment "#.\{-}\(?>\|$\)\@="  contained extend contains=@Spell
+syn match phpComment "//.\{-}\(?>\|$\)\@=" contained extend contains=@Spell
+
+" Identifiers
+" Statements
+" PreProc
+" Types
+" Special
+" Underline
+" Ignore
+" Error
+" Todo
