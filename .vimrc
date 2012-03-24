@@ -18,8 +18,8 @@ set matchpairs+=<:>
 set viminfo+=!
 set hidden
 set virtualedit=block
-set scrolloff=10
-set encoding=latin1
+set scrolloff=5
+set encoding=utf-8
 set spell spelllang=en_us
 set switchbuf=useopen
 
@@ -29,7 +29,7 @@ filetype indent on
 filetype plugin on
 
 " Command maps
-"map K <Nop>
+map K <Nop>
 map Y y$
 noremap <F1> :update<CR>
 vnoremap <F1> <C-C>:update<CR>
@@ -60,13 +60,6 @@ inoremap {<CR>  {<CR>}<Esc>O
 "let g:ctags_title = 0
 "let g:ctags_ruler = 1
 "let generate_tags = 1
-
-" PHP indent script
-let PHP_removeCRwhenUnix = 1
-
-" closetag.vim
-let g:closetag_html_style=1
-"au Filetype html,php source ~/vimfiles/plugin/closetag.vim
 
 " Tagslist plugin
 let Tlist_Show_Menu = 1
