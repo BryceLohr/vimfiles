@@ -21,4 +21,4 @@ let PHP_removeCRwhenUnix = 1
 
 " closetag.vim. Change to html style and source again to pick up change
 let g:closetag_html_style = 1
-source ~/.vim/plugin/closetag.vim
+source ~/.vim/scripts/closetag.vim

@@ -49,6 +49,7 @@ map <C-Down> <C-E>
 imap <C-Down> <C-O><C-E>
 inoremap {<CR>  {<CR>}<Esc>O
 
+" TODO: Clean up this section sometime
 " Plugin configs: Not sure if these can be moved to an after/ftplugin file...
 
 " ctags (Displays tag in ruler)
