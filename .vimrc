@@ -1,13 +1,10 @@
 " General Vim options
 set nocompatible
 set nohlsearch
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set wrapmargin=0
 set formatoptions=croqnawl
 set textwidth=80
-set expandtab
 set backspace=indent,eol,start
 set autoindent
 set smartindent
@@ -18,7 +15,7 @@ set matchpairs+=<:>
 set viminfo+=!
 set hidden
 set virtualedit=block
-set scrolloff=5
+set scrolloff=3
 set encoding=utf-8
 set spell spelllang=en_us
 set switchbuf=useopen
