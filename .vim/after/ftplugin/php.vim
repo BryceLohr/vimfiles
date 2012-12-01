@@ -19,6 +19,6 @@ let php_parent_error_close = 1
 let php_parent_error_open = 1
 let PHP_removeCRwhenUnix = 1
 
-" closetag.vim
+" closetag.vim. Change to html style and source again to pick up change
 let g:closetag_html_style = 1
 source ~/.vim/plugin/closetag.vim

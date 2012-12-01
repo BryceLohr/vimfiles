@@ -64,6 +64,3 @@ let Tlist_Max_Submenu_Items = 40
 let Tlist_Process_File_Always = 1
 let tlist_php_settings = 'PHP;f:Functions;m:Methods'
 let tlist_javascript_settings = 'JavaScript;f:Functions'
-
-" NERDCommenter
-let NERDMenuMode = 2
