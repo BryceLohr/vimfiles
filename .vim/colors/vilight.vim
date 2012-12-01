@@ -66,3 +66,6 @@ hi DiffAdd        guifg=#8f9d6a          guibg=#282828
 hi DiffChange     guifg=#cda869          guibg=#282828
 hi DiffText       guifg=#f8f8f8          guibg=#282828
 hi DiffDelete     guifg=#cf6a4c          guibg=#282828
+
+"Invisible characters
+hi SpecialKey     guifg=#665f57
