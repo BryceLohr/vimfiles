@@ -19,6 +19,7 @@ set scrolloff=3
 set encoding=utf-8
 set spell spelllang=en_us
 set switchbuf=useopen
+set number
 
 syntax enable
 filetype on
@@ -48,6 +49,7 @@ imap <C-Up> <C-O><C-Y>
 map <C-Down> <C-E>
 imap <C-Down> <C-O><C-E>
 inoremap {<CR>  {<CR>}<Esc>O
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " TODO: Clean up this section sometime
 " Plugin configs: Not sure if these can be moved to an after/ftplugin file...
