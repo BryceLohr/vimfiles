@@ -1,3 +1,7 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
 " General Vim options
 set nocompatible
 set nohlsearch
@@ -22,9 +26,7 @@ set switchbuf=useopen
 set number
 
 syntax enable
-filetype on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 " Command maps
 map K <Nop>
