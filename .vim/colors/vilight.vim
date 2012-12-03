@@ -11,7 +11,7 @@ let g:colors_name="twilight"
 
 hi Normal         guifg=#F8F8F8           guibg=#141414
 hi Cursor         guifg=#141414           guibg=#d5dcee
-hi CursorLine	  guifg=#424242			  guibg=#d5dcee
+hi CursorLine	  guifg=NONE			  guibg=#242424
 hi Directory      guifg=#8F9D6A           guibg=#141414
 hi VertSplit      guifg=#d5dcee           guibg=#d5dcee
 hi Folded         guifg=#888888           guibg=#282828
@@ -27,7 +27,7 @@ hi StatusLine     guifg=#0e2231           guibg=#8693a5
 hi StatusLineNC   guifg=#0e2231           guibg=#8693a5
 hi Visual         guifg=#141414           guibg=#d5dcee     gui=italic
 hi WildMenu       guifg=#9b70f3           guibg=#0e2231
-hi MatchParen	  guifg=#f8f8f8		      guibg=#4f94cd
+hi MatchParen	  guifg=#44FF44		      guibg=NONE
 hi ErrorMsg		  guifg=#cf6a4c           guibg=NONE
 hi WarningMsg	  guifg=#cf6a4c			  guibg=NONE
 hi Title		  guifg=#cf6a4c			  guibg=#141414
