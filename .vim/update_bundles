@@ -3,6 +3,12 @@
 # Ideally, there would be a way to "include" just this file as a submodule or 
 # similar or similar thing.
 
+# TODO:
+# Look through the rest of tpope's and tsaleh's Vim scripts
+# Search for more "python vim" goodies
+# Try: git://github.com/hynek/vim-python-pep8-indent.git
+# Try: https://github.com/klen/python-mode
+
 git_bundles = %w{
   git://github.com/tpope/vim-pathogen.git
   git://github.com/msanders/snipmate.vim.git
@@ -13,7 +19,6 @@ git_bundles = %w{
   git://github.com/nathanaelkane/vim-indent-guides.git
   git://github.com/tsaleh/vim-matchit.git
 }
-  # git://github.com/hynek/vim-python-pep8-indent.git
 
 vim_org_scripts = [
   ["python", "17429", "syntax"],
