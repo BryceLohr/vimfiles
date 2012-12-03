@@ -5,6 +5,7 @@
 
 git_bundles = %w{
   git://github.com/tpope/vim-pathogen.git
+  git://github.com/msanders/snipmate.vim.git
 }
 
 require 'fileutils'
