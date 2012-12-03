@@ -15,6 +15,10 @@ git_bundles = %w{
 }
   # git://github.com/hynek/vim-python-pep8-indent.git
 
+vim_org_scripts = [
+  ["python", "17429", "syntax"],
+]
+
 require 'fileutils'
 require 'open-uri'
 
@@ -31,3 +35,11 @@ end
 
 Dir["*/.git"].each {|f| FileUtils.rm_rf(f) }
 
+vim_org_scripts.each do |name, script_id, script_type|
+  puts "vim.org script: #{name}"
+  local_file = File.join("vim.org", script_type, "#{name}.vim")
+  FileUtils.mkdir_p(File.dirname(local_file))
+  File.open(local_file, "w") do |file|
+    file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
+  end
+end
