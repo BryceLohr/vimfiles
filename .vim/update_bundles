@@ -18,6 +18,7 @@ git_bundles = %w{
   git://github.com/tpope/vim-surround.git
   git://github.com/nathanaelkane/vim-indent-guides.git
   git://github.com/tsaleh/vim-matchit.git
+  git://github.com/godlygeek/tabular.git
 }
 
 vim_org_scripts = [
