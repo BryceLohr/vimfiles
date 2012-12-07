@@ -19,10 +19,12 @@ git_bundles = %w{
   git://github.com/nathanaelkane/vim-indent-guides.git
   git://github.com/tsaleh/vim-matchit.git
   git://github.com/godlygeek/tabular.git
+  git://github.com/pangloss/vim-javascript.git
 }
 
 vim_org_scripts = [
   ["python", "17429", "syntax"],
+  ["html",   "16508", "indent"],
 ]
 
 require 'fileutils'

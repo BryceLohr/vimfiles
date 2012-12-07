@@ -76,3 +76,8 @@ let g:CommandTMatchWindowAtTop = 1
 " Indent guides plugin
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 5
+
+" HTML indent plugin
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
