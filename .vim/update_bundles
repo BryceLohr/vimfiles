@@ -49,3 +49,11 @@ vim_org_scripts.each do |name, script_id, script_type|
     file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
   end
 end
+
+# Build the Command-T Ruby C extension
+puts "Building Command-T's C extension..."
+cmdt_ext_dir = File.join("Command-T", "ruby", "command-t")
+FileUtils.cd(cmdt_ext_dir)
+`ruby extconf.rb`
+`ARCHFLAGS="-arch i386" make`
+
