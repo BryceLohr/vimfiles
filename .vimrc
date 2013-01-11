@@ -81,3 +81,25 @@ let g:indent_guides_color_change_percent = 5
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" Less mode toggle
+let s:less_mode_on = 0
+function ToggleLessMode()
+    if !s:less_mode_on
+        echo "Less mode on"
+        nnoremap <buffer> k <C-Y>
+        nnoremap <buffer> j <C-E>
+        nnoremap <buffer> <Up> <C-Y>
+        nnoremap <buffer> <Down> <C-E>
+        let s:less_mode_on = 1
+    else
+        echo "Less mode off"
+        nunmap <buffer> k
+        nunmap <buffer> j
+        nunmap <buffer> <Up>
+        nunmap <buffer> <Down>
+        let s:less_mode_on = 0
+    endif
+endfunction
+nmap <buffer> <Leader>l :call ToggleLessMode()<CR>
+
