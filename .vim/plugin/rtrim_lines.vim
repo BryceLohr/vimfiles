@@ -15,4 +15,4 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
-autocmd BufWritePre *.py,*.js,*.html,*.css,*.php,*.sh,*.sql :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.py,*.rb,*.js,*.html,*.css,*.php,*.sh,*.sql :call <SID>StripTrailingWhitespaces()
