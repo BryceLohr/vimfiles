@@ -4,10 +4,10 @@
 # similar or similar thing.
 
 # TODO:
-# Look through the rest of tpope's and tsaleh's Vim scripts
 # Search for more "python vim" goodies
 # Try: git://github.com/hynek/vim-python-pep8-indent.git
 # Try: https://github.com/klen/python-mode
+# Try: git://github.com/rstacruz/sparkup.git
 
 git_bundles = %w{
   git://github.com/tpope/vim-pathogen.git
