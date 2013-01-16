@@ -24,6 +24,7 @@ set encoding=utf-8
 set spell spelllang=en_us
 set switchbuf=useopen
 set number
+set visualbell
 
 syntax enable
 filetype plugin indent on
