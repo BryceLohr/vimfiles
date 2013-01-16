@@ -3,8 +3,8 @@
 " @Website:     http://www.vim.org/account/profile.php?user_id=4037
 " @License:     GPL (see http://www.gnu.org/licenses/gpl.txt)
 " @Created:     2007-09-17.
-" @Last Change: 2012-09-22.
-" @Revision:    0.0.604
+" @Last Change: 2012-12-10.
+" @Revision:    0.0.615
 
 " call tlog#Log('Load: '. expand('<sfile>')) " vimtlib-sfile
 
@@ -64,7 +64,7 @@ if !exists("g:tcommentGuessFileType")
     let g:tcommentGuessFileType = 0   "{{{2
 endif
 if !exists("g:tcommentGuessFileType_dsl")
-    " For dsl documents, assumet filetype = xml.
+    " For dsl documents, assume filetype = xml.
     let g:tcommentGuessFileType_dsl = 'xml'   "{{{2
 endif
 if !exists("g:tcommentGuessFileType_php")
@@ -87,6 +87,9 @@ if !exists("g:tcommentGuessFileType_django")
 endif
 if !exists("g:tcommentGuessFileType_eruby")
     let g:tcommentGuessFileType_eruby = 1   "{{{2
+endif
+if !exists("g:tcommentGuessFileType_smarty")
+    let g:tcommentGuessFileType_smarty = 1   "{{{2
 endif
 
 if !exists("g:tcommentIgnoreTypes_php")
@@ -116,6 +119,11 @@ if !exists('g:tcommentSyntaxMap')
             \ 'vimPythonRegion':   'python',
             \ 'vimRubyRegion':     'ruby',
             \ 'vimTclRegion':      'tcl',
+            \ 'Delimiter': {
+            \     'filetype': {
+            \         'php': 'php',
+            \     },
+            \ },
             \ 'phpRegionDelimiter': {
             \     'prevnonblank': [
             \         {'match': '<?php', 'filetype': 'php'},
@@ -268,6 +276,7 @@ call tcomment#DefineType('c',                g:tcommentLineC    )
 call tcomment#DefineType('c_inline',         g:tcommentInlineC  )
 call tcomment#DefineType('c_block',          g:tcommentBlockC   )
 call tcomment#DefineType('cfg',              '# %s'             )
+call tcomment#DefineType('chromemanifest',   '# %s'             )
 call tcomment#DefineType('clojure',          {'commentstring': '; %s', 'count': 2})
 call tcomment#DefineType('clojure_inline',   '; %s'             )
 call tcomment#DefineType('clojurescript',    ';; %s'            )
@@ -313,6 +322,7 @@ call tcomment#DefineType('html_inline',      g:tcommentInlineXML)
 call tcomment#DefineType('html_block',       g:tcommentBlockXML )
 call tcomment#DefineType('htmldjango',       '{# %s #}'     )
 call tcomment#DefineType('htmldjango_block', "{%% comment %%}%s{%% endcomment %%}\n ")
+call tcomment#DefineType('ini',              '; %s'             ) " php ini (/etc/php5/...)
 call tcomment#DefineType('io',               '// %s'            )
 call tcomment#DefineType('jasmine',          '# %s'             )
 call tcomment#DefineType('javaScript',       '// %s'            )
@@ -368,6 +378,9 @@ call tcomment#DefineType('ruby_nodoc_block', "=begin%s=end"     )
 call tcomment#DefineType('r',                '# %s'             )
 call tcomment#DefineType('samba',            '# %s'             )
 call tcomment#DefineType('sbs',              "' %s"             )
+call tcomment#DefineType('scala',            '// %s'            )
+call tcomment#DefineType('scala_inline',     g:tcommentInlineC  )
+call tcomment#DefineType('scala_block',      g:tcommentBlockC   )
 call tcomment#DefineType('scheme',           '; %s'             )
 call tcomment#DefineType('scss',             '// %s'            )
 call tcomment#DefineType('scss_inline',      g:tcommentInlineC  )
@@ -1164,9 +1177,11 @@ function! s:GuessFileType(beg, end, commentMode, filetype, ...)
                 else
                     let key = ''
                 endif
-                if empty(key)
+                if empty(key) || !has_key(ftypeMap, key)
+                    let ftypeftype = get(ftypeMap, 'filetype', {})
+                    " TLogVAR ftypeMap, ftypeftype
                     unlet! ftypeMap
-                    let ftypeMap = ''
+                    let ftypeMap = get(ftypeftype, a:filetype, '')
                 else
                     let mapft = ''
                     for mapdef in ftypeMap[key]
