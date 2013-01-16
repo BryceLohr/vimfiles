@@ -5,9 +5,7 @@
 
 # TODO:
 # Search for more "python vim" goodies
-# Try: git://github.com/hynek/vim-python-pep8-indent.git
-# Try: https://github.com/klen/python-mode
-# Try: git://github.com/rstacruz/sparkup.git
+# Try: https://github.com/klen/python-mode or constituent parts
 
 git_bundles = %w{
   git://github.com/tpope/vim-pathogen.git
@@ -20,6 +18,7 @@ git_bundles = %w{
   git://github.com/tsaleh/vim-matchit.git
   git://github.com/godlygeek/tabular.git
   git://github.com/pangloss/vim-javascript.git
+  git://github.com/rstacruz/sparkup.git
 }
 
 vim_org_scripts = [
@@ -30,7 +29,7 @@ vim_org_scripts = [
 require 'fileutils'
 require 'open-uri'
 
-bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+bundles_dir = File.expand_path(File.join(File.dirname(__FILE__), "bundle"))
 
 FileUtils.rm_rf(bundles_dir)
 FileUtils.mkdir(bundles_dir)
@@ -52,6 +51,10 @@ vim_org_scripts.each do |name, script_id, script_type|
   end
 end
 
+#
+# Special plugin-specific installation steps below
+#
+
 # Build the Command-T Ruby C extension
 puts "Building Command-T's C extension..."
 cmdt_ext_dir = File.join("Command-T", "ruby", "command-t")
@@ -59,3 +62,11 @@ FileUtils.cd(cmdt_ext_dir)
 `ruby extconf.rb`
 `ARCHFLAGS="-arch i386" make`
 
+# Install just the 'vim' subdir of Sparkup
+puts "Fixing Sparkup directory..."
+FileUtils.cd(bundles_dir)
+FileUtils.cp_r('sparkup/vim/ftplugin', '/tmp/')
+FileUtils.rm_rf(Dir.glob(['sparkup/*', 'sparkup/.gitignore']))
+FileUtils.mv('/tmp/ftplugin', 'sparkup/')
+
+puts "Done."
